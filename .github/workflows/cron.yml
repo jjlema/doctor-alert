@@ -22,8 +22,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
-        env:
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-        run: python scripts/script.py
+        run: python script.py
