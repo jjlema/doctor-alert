@@ -1,7 +1,9 @@
 name: Run Python script manually
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Lanzamiento manual
+  schedule:
+    - cron: '22 0 * * *'
 
 jobs:
   run-script:
