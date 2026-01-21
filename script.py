@@ -32,9 +32,9 @@ def send_email_notification(medicos:list[str]):
             server.starttls()  # Seguridad TLS
             server.login(EMAIL_FROM, EMAIL_PASSWORD)
             server.send_message(msg)
-        print(f"Correo enviado correctamente a {EMAIL_TO}")
+        print("Correo enviado correctamente")
     except Exception as e:
-        print(f"Error al enviar correo: {e}")
+        print("Error al enviar correo")
 
 
 def main():
