@@ -1,4 +1,4 @@
-name: Run Python script manually
+name: Run Python script
 
 on:
   workflow_dispatch:  # Lanzamiento manual
