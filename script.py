@@ -18,7 +18,7 @@ def is_medico_available(id_medico: str) -> tuple[str,bool]:
     soup = BeautifulSoup(response.content, "html.parser")
     medico = soup.find('input', {'name': 'nomemedico'})['value']
     cupos = [inp['value'] for inp in soup.find_all('input', {'name': 'telfurx'}) if 'value' in inp.attrs]
-    return medico, any(cupo == 'ABERTO' for cupo in cupos)
+    return medico, all(cupo != 'PECHADO' for cupo in cupos)
 
 
 def send_email_notification(medicos:list[str]):
